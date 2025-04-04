@@ -1,11 +1,8 @@
-
+from src.main import compute_linear_regression
+import numpy as np
 import sys
 
 sys.path.append('./src/')
-
-import numpy as np
-
-from main import compute_linear_regression
 
 
 VERBOSE = False
@@ -28,7 +25,8 @@ def noisy_case():
             [-1.056, 3.089],
         ]
     )
-    y = np.array([[16], [-6], [18], [15], [-18], [-10], [10], [-23], [13], [8]])
+    y = np.array([[16], [-6], [18], [15], [-18],
+                 [-10], [10], [-23], [13], [8]])
     ref_weights = np.array([3, 1, 2])  # corresponds to y = 3 + 1*x1 + 2*x2
     try:
         weights, cost = compute_linear_regression(
@@ -74,7 +72,8 @@ def simple_case():
             [-1, 3],
         ]
     )
-    y = np.array([[16], [-6], [18], [15], [-18], [-10], [10], [-23], [13], [8]])
+    y = np.array([[16], [-6], [18], [15], [-18],
+                 [-10], [10], [-23], [13], [8]])
     ref_weights = np.array([3, 1, 2])  # corresponds to y = 3 + 1*x1 + 2*x2
     try:
         weights, cost = compute_linear_regression(

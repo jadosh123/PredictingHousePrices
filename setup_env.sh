@@ -7,11 +7,12 @@ set -e
 VENV_NAME=".venv" # Name of the virtual environment directory (using .venv is common)
 # List of packages to install
 PACKAGES=(
-    "numpy"
     "matplotlib"
     "seaborn"
     "pandas"
-    "jupyter" # Added Jupyter
+    "jupyter"
+    "kaggle"
+    "tensorflow"
 )
 
 # --- Helper Functions ---

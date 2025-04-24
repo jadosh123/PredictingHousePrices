@@ -13,6 +13,9 @@ df_train = df_train.drop('Id', axis=1)
 # Dispose of majority null columns
 du.drop_null_majority_features(df_train, df_test)
 
+# Dispose of single value majority features
+du.drop_single_val_majority(df_train, df_test)
+
 # Convert to tensorflow dataset
 label = 'SalePrice'
 train_ds = tfdf.keras.pd_dataframe_to_tf_dataset(

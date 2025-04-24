@@ -1,5 +1,6 @@
 import pandas as pd
 import tensorflow_decision_forests as tfdf
+import data_utils as du
 
 
 # Load datasets
@@ -10,13 +11,7 @@ df_test = pd.read_csv("kaggle_dataset/test.csv")
 df_train = df_train.drop('Id', axis=1)
 
 # Dispose of majority null columns
-cols_to_drop = []
-for col in df_train.columns:
-    if df_train[col].isnull().sum() > len(df_train[col])/2:
-        cols_to_drop.append(col)
-
-df_train.drop(cols_to_drop, axis=1, inplace=True)
-df_test.drop(cols_to_drop, axis=1, inplace=True)
+du.drop_null_majority_features(df_train, df_test)
 
 # Convert to tensorflow dataset
 label = 'SalePrice'

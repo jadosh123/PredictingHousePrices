@@ -13,6 +13,7 @@ PACKAGES=(
     "kaggle"
     "tensorflow_decision_forests"
     "numpy"
+    "sklearn"
 )
 
 # Define the name for the virtual environment directory

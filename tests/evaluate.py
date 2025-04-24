@@ -1,4 +1,4 @@
-from src.main import compute_linear_regression
+from model import compute_linear_regression
 import numpy as np
 import sys
 

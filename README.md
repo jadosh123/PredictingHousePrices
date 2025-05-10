@@ -1,4 +1,4 @@
-# PredictingHousePrices## Getting Started
+# PredictingHousePrices Getting Started
 
 Follow these steps to set up the project and run the code:
 
